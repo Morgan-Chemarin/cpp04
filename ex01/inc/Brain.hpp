@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 12:16:12 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 12:34:39 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/21 16:08:42 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ public:
 	Brain& operator=(const Brain& other);
 	~Brain();
 
-	void setIdeas(int N, std::string value);
-	std::string getIdeas(int N); 
+	void setIdeas(int N, const std::string& value);
+	std::string getIdeas(int N) const; 
 };
 
 #endif

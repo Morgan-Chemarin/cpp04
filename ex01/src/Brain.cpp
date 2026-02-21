@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 12:27:30 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 12:43:33 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/21 16:08:51 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Brain::Brain(const Brain& other)
 Brain& Brain::operator=(const Brain& other)
 {
 	if (this != &other)
-		for (int i = 0; i < 99; i++)
+		for (int i = 0; i < 100; i++)
 			this->ideas[i] = other.ideas[i];
 	std::cout << "Assignement operator Brain called" << std::endl;
 	return *this;
@@ -37,12 +37,15 @@ Brain::~Brain()
 	std::cout << "Destructor Brain called" << std::endl;
 }
 
-void Brain::setIdeas(int N, std::string value)
+void Brain::setIdeas(int N, const std::string& value)
 {
-	this->ideas[N] = value;
+	if (N < 100 && N >= 0)
+		this->ideas[N] = value;
 }
 
-std::string Brain::getIdeas(int N)
+std::string Brain::getIdeas(int N) const
 {
-	return this->ideas[N];
+	if (N < 100 && N >= 0)
+		return this->ideas[N];
+	return "";
 }
