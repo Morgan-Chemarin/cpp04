@@ -1,0 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/21 11:08:38 by dev               #+#    #+#             */
+/*   Updated: 2026/02/21 11:58:25 by dev              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../inc/WrongAnimal.hpp"
+
+WrongAnimal::WrongAnimal() // initialisation list
+{
+	std::cout << "Constructor WrongAnimal called" << std::endl;
+}
+
+WrongAnimal::WrongAnimal(const WrongAnimal& other)
+{
+	*this = other;
+	std::cout << "Copy constructor WrongAnimal called" << std::endl;
+}
+
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other)
+{
+	if (this != &other)
+		this->type = other.type;
+	std::cout << "Assignement operator WrongAnimal called" << std::endl;
+	return *this;
+}
+
+WrongAnimal::~WrongAnimal()
+{
+	std::cout << "Destructor WrongAnimal called" << std::endl;
+}
+
+void WrongAnimal::makeSound() const
+{
+	std::cout << "WrongAnimal don't make sound !" << std::endl;
+}
+
+std::string WrongAnimal::getType() const
+{
+	return this->type;
+}
