@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 11:02:43 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 11:21:07 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/21 11:59:46 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ public:
 	virtual ~WrongCat();
 
 	void makeSound() const;
-	std::string getType() const;
 };
 
 #endif

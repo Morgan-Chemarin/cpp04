@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 11:08:45 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 11:18:53 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/21 12:00:03 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,4 @@ WrongCat::~WrongCat()
 void WrongCat::makeSound() const
 {
 	std::cout << "UUUUUUUAAAAAIIMM" << std::endl;
-}
-
-std::string WrongCat::getType() const
-{
-	return this->type;
 }

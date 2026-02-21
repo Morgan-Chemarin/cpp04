@@ -6,13 +6,13 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 09:58:00 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 11:09:16 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/21 12:00:36 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Animal.hpp"
 
-Animal::Animal()
+Animal::Animal() // initialisation list
 {
 	std::cout << "Constructor Animal called" << std::endl;
 }

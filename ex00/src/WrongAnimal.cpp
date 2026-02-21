@@ -6,13 +6,13 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 11:08:38 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 11:11:11 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/21 11:58:25 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal()
+WrongAnimal::WrongAnimal() // initialisation list
 {
 	std::cout << "Constructor WrongAnimal called" << std::endl;
 }

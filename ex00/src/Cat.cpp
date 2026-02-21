@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 10:05:25 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 10:54:08 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/21 12:00:15 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,4 @@ Cat::~Cat()
 void Cat::makeSound() const
 {
 	std::cout << "MIAOUUUUUUUUUUUUUUUUUU" << std::endl;
-}
-
-std::string Cat::getType() const
-{
-	return this->type;
 }
