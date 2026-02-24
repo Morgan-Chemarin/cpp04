@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 09:54:30 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 17:10:33 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 15:54:44 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,10 @@ static void testDeepCopy()
 	{
 		Dog firstDog;
 		firstDog.setIdea(0, "I want food");
-		Dog secondDog(firstDog);
-		firstDog.setIdea(0, "I don't want food");
-
+		{
+			Dog secondDog(firstDog);	
+		}		
 		std::cout << firstDog.getType() << ": " << firstDog.getIdea(0) << std::endl;
-		std::cout << secondDog.getType() << ": " << secondDog.getIdea(0) << std::endl;
 	}
 	
 	std::cout << std::endl;
@@ -67,14 +66,11 @@ static void testDeepCopy()
 	{
 		Cat firstCat;
 		firstCat.setIdea(10, "I want sleep");
-		Cat secondCat;
-		secondCat = firstCat;
-		firstCat.setIdea(10, "I don't sleep");
-
+		{
+			Cat secondCat(firstCat);
+		}
 		std::cout << firstCat.getType() << ": " << firstCat.getIdea(10) << std::endl;
-		std::cout << secondCat.getType() << ": " << secondCat.getIdea(10) << std::endl;
 	}
-
 	return;
 }
 

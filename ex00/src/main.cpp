@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 09:54:30 by dev               #+#    #+#             */
-/*   Updated: 2026/02/24 14:16:56 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 15:40:01 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int main()
 
 	std::cout << waf->getType() << " " << std::endl;
 	std::cout << mew->getType() << " " << std::endl;
-	mew->makeSound();
 	waf->makeSound();
+	mew->makeSound();
 	meta->makeSound();
 	
 	std::cout << std::endl;
@@ -45,7 +45,6 @@ int main()
 	delete meta;
 	delete waf;
 	delete mew;
-
 	delete realWrongMew;
 
 	return 0;
