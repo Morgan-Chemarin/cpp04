@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 09:55:17 by dev               #+#    #+#             */
-/*   Updated: 2026/02/22 00:57:39 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 15:27:42 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 	virtual ~AAnimal();
 
 	virtual void makeSound() const = 0;
-	virtual std::string getType() const;
+	std::string getType() const;
 };
 
 #endif

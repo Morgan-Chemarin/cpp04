@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 10:05:12 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 12:00:09 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 14:37:08 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Dog::Dog(): Animal()
 {
-	this->type = "Dog";
 	std::cout << "Constructor Dog called" << std::endl;
+	this->type = "Dog";
 }
 
 Dog::Dog(const Dog& other): Animal(other)
@@ -25,9 +25,9 @@ Dog::Dog(const Dog& other): Animal(other)
 
 Dog& Dog::operator=(const Dog& other)
 {
-	if (this != &other)
-		Animal::operator=(other);
 	std::cout << "Assignement operator Dog called" << std::endl;
+	if (this != &other)
+		this->type = other.type;
 	return *this;
 }
 

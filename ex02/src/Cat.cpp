@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 10:05:25 by dev               #+#    #+#             */
-/*   Updated: 2026/02/22 00:59:19 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 15:30:28 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,32 @@
 
 Cat::Cat(): AAnimal()
 {
+	std::cout << "Constructor Cat called" << std::endl;
 	this->type = "Cat";
 	this->_brain = new Brain();
-	std::cout << "Constructor Cat called" << std::endl;
 }
 
 Cat::Cat(const Cat& other): AAnimal(other)
 {
-	this->_brain = new Brain(*other._brain);
 	std::cout << "Copy constructor Cat called" << std::endl;
+	this->_brain = new Brain(*other._brain);
 }
 
 Cat& Cat::operator=(const Cat& other)
 {
+	std::cout << "Assignement operator Cat called" << std::endl;
 	if (this != &other)
 	{
-		AAnimal::operator=(other);
+		this->type = other.type;
 		*this->_brain = *other._brain;
 	}
-		
-	std::cout << "Assignement operator Cat called" << std::endl;
 	return *this;
 }
 
 Cat::~Cat()
 {
-	delete this->_brain;
 	std::cout << "Destructor Cat called" << std::endl;
+	delete this->_brain;
 }
 
 void Cat::makeSound() const

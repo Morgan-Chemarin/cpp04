@@ -6,28 +6,28 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 09:58:00 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 12:00:36 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 14:44:02 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Animal.hpp"
 
-Animal::Animal() // initialisation list
+Animal::Animal()
 {
 	std::cout << "Constructor Animal called" << std::endl;
 }
 
 Animal::Animal(const Animal& other)
 {
-	*this = other;
 	std::cout << "Copy constructor Animal called" << std::endl;
+	*this = other;
 }
 
 Animal& Animal::operator=(const Animal& other)
 {
+	std::cout << "Assignement operator Animal called" << std::endl;
 	if (this != &other)
 		this->type = other.type;
-	std::cout << "Assignement operator Animal called" << std::endl;
 	return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 10:05:15 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 11:59:28 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 14:20:46 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	Dog& operator=(const Dog& other);
 	virtual ~Dog();
 
-	virtual void makeSound() const;
+	void makeSound() const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 10:05:25 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 12:00:15 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 14:36:57 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Cat::Cat(): Animal()
 {
-	this->type = "Cat";
 	std::cout << "Constructor Cat called" << std::endl;
+	this->type = "Cat";
 }
 
 Cat::Cat(const Cat& other): Animal(other)
@@ -25,9 +25,9 @@ Cat::Cat(const Cat& other): Animal(other)
 
 Cat& Cat::operator=(const Cat& other)
 {
-	if (this != &other)
-		Animal::operator=(other);
 	std::cout << "Assignement operator Cat called" << std::endl;
+	if (this != &other)
+		this->type = other.type;
 	return *this;
 }
 

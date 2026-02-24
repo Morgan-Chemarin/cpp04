@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 10:05:18 by dev               #+#    #+#             */
-/*   Updated: 2026/02/22 00:57:50 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 15:26:46 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	Cat& operator=(const Cat& other);
 	virtual ~Cat();
 
-	virtual void makeSound() const;
+	void makeSound() const;
 
 	void setIdea(int id, const std::string& idea);
 	std::string getIdea(int id) const;

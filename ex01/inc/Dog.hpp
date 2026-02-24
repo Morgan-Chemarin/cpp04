@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 10:05:15 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 16:07:51 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 14:23:42 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	Dog& operator=(const Dog& other);
 	virtual ~Dog();
 
-	virtual void makeSound() const;
+	void makeSound() const;
 
 	void setIdea(int id, const std::string& idea);
 	std::string getIdea(int id) const;

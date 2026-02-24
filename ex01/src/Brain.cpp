@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 12:27:30 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 16:08:51 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 14:25:22 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ Brain::Brain()
 
 Brain::Brain(const Brain& other)
 {
-	*this = other;
 	std::cout << "Copy constructor Brain called" << std::endl;
+	*this = other;
 }
 
 Brain& Brain::operator=(const Brain& other)
 {
+	std::cout << "Assignement operator Brain called" << std::endl;
 	if (this != &other)
 		for (int i = 0; i < 100; i++)
 			this->ideas[i] = other.ideas[i];
-	std::cout << "Assignement operator Brain called" << std::endl;
 	return *this;
 }
 

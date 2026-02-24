@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 11:02:43 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 11:59:46 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 14:24:05 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	WrongCat();
 	WrongCat(const WrongCat& other);
 	WrongCat& operator=(const WrongCat& other);
-	virtual ~WrongCat();
+	~WrongCat();
 
 	void makeSound() const;
 };

@@ -6,28 +6,28 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 11:08:38 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 11:58:25 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 14:26:58 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal() // initialisation list
+WrongAnimal::WrongAnimal()
 {
 	std::cout << "Constructor WrongAnimal called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& other)
 {
-	*this = other;
 	std::cout << "Copy constructor WrongAnimal called" << std::endl;
+	*this = other;
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other)
 {
+	std::cout << "Assignement operator WrongAnimal called" << std::endl;
 	if (this != &other)
 		this->type = other.type;
-	std::cout << "Assignement operator WrongAnimal called" << std::endl;
 	return *this;
 }
 

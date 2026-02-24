@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 11:08:45 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 12:00:03 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 15:19:24 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 WrongCat::WrongCat(): WrongAnimal()
 {
-	this->type = "WrongCat";
 	std::cout << "Constructor WrongCat called" << std::endl;
+	this->type = "WrongCat";
 }
 
 WrongCat::WrongCat(const WrongCat& other): WrongAnimal(other)
@@ -25,9 +25,9 @@ WrongCat::WrongCat(const WrongCat& other): WrongAnimal(other)
 
 WrongCat& WrongCat::operator=(const WrongCat& other)
 {
-	if (this != &other)
-		WrongAnimal::operator=(other);
 	std::cout << "Assignement operator WrongCat called" << std::endl;
+	if (this != &other)
+		this->type = other.type;
 	return *this;
 }
 

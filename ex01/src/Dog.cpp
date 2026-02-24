@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 10:05:12 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 16:09:58 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 15:18:40 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,32 @@
 
 Dog::Dog(): Animal()
 {
+	std::cout << "Constructor Dog called" << std::endl;
 	this->type = "Dog";
 	this->_brain = new Brain();
-	std::cout << "Constructor Dog called" << std::endl;
 }
 
 Dog::Dog(const Dog& other): Animal(other)
 {
-	this->_brain = new Brain(*other._brain);
 	std::cout << "Copy constructor Dog called" << std::endl;
+	this->_brain = new Brain(*other._brain);
 }
 
 Dog& Dog::operator=(const Dog& other)
 {
+	std::cout << "Assignement operator Dog called" << std::endl;
 	if (this != &other)
 	{
-		Animal::operator=(other);
+		this->type = other.type;
 		*this->_brain = *other._brain;
 	}
-		
-	std::cout << "Assignement operator Dog called" << std::endl;
 	return *this;
 }
 
 Dog::~Dog()
 {
-	delete this->_brain;
 	std::cout << "Destructor Dog called" << std::endl;
+	delete this->_brain;
 }
 
 void Dog::makeSound() const

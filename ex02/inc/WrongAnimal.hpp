@@ -6,7 +6,7 @@
 /*   By: dev <dev@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 11:06:26 by dev               #+#    #+#             */
-/*   Updated: 2026/02/21 11:07:12 by dev              ###   ########.fr       */
+/*   Updated: 2026/02/24 15:27:02 by dev              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
 	WrongAnimal();
 	WrongAnimal(const WrongAnimal& other);
 	WrongAnimal& operator=(const WrongAnimal& other);
-	virtual ~WrongAnimal();
+	~WrongAnimal();
 
 	void makeSound() const;
 	std::string getType() const;
